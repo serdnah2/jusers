@@ -1,0 +1,65 @@
+<div class="row container-margin-top">
+    <div id="ju-picture-container" class="col-md-8 col-md-offset-2">
+        <img class="img-responsive"/>
+        <a id="ju-arrow-container-left">
+            <div id="ju-arrow-left">
+                <span class="glyphicon glyphicon-chevron-left ju-arrow-pagination"></span>
+            </div>
+        </a>
+        <a id="ju-arrow-container-right">
+            <div id="ju-arrow-right">
+                <span class="glyphicon glyphicon-chevron-right ju-arrow-pagination"></span>
+            </div>
+        </a>
+        <div id="ju-options-picture">
+            <div class="btn-group">
+                <a data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span></a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li id="ju-set-default-image"><a>Usar como foto de perfil</a></li>
+                    <li id="ju-delete-picture"><a>Eliminar</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-sm-offset-3">
+        <div id="ju-picture-description">
+            <div></div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-sm-offset-3">
+        <div id="ju-picture-add-description">
+            <div>
+                <input type="text" class="form-control" placeholder="descripci&oacute;n..." name="description" id="ju-input-description">
+                <a class="btn btn-default ju-button-save-description">Guardar</a>
+            </div>
+            <hr/>
+        </div>
+    </div>
+    <div class="col-sm-6 col-sm-offset-3">
+        <div id="ju-more-picture" class="text-center">
+            <button type="button" class="btn btn-default ju-index" data-loading-text="Cargando...">
+                <span class="glyphicon glyphicon-plus"></span> Comentarios anteriores
+            </button>
+        </div>
+        <div id="ju-nav-profile-user-comments"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div id="ju-container-new-comment" class="ju-nav-profile-item-comment">
+                <div class="col-xs-3 ju-nav-profile-item-comment-picture"></div>
+                <div class="col-xs-10 ju-nav-profile-item-comment-text">
+                    <form id="ju-new-comment" role="form">
+                        <input type="text" class="form-control" id="ju-comment-input" placeholder="Escribe un comentario..." name="comment" autocomplete="off" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ju-all-picture-user" class="row">
+    <div class="fh ju-display-none">
+        <a href="?view=editprofile&amp;page=picture" class="pull-right ju-tooltip" rel="tooltip" data-placement="bottom" data-original-title="A&ntilde;adir">
+            <span class="glyphicon glyphicon-plus"></span>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+/* 
+    Document   : styles
+    Created on : Sep 18, 2013, 2:59:52 PM
+    Author     : serdnah2
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.container, #ju-installed, #ju-install-container, #ju-installed-error{
+    display: none;
+}

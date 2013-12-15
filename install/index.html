@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="img/favicon.png">
+
+        <title>Instalar jusers</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <!-- Bootstrap theme -->
+        <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="../css/theme.css" rel="stylesheet">
+        <link href="../css/styles.css" rel="stylesheet">
+        <link href="../css/login.css" rel="stylesheet">
+        <link href="../css/pygments-manni.css" rel="stylesheet">
+        <link href="../css/install.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="../js/html5shiv.js"></script>
+          <script src="../js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="container">
+            <div id="ju-install-container" class="col-sm-6 col-sm-offset-3">
+                <h2>Instalar jusers</h2>
+                <p>
+                    Este es el asistente de la configuraci&oacute;n de la base de datos del sistema. Por favor ingrese
+                    los siguientes datos de forma correcta para que el sistema pueda funcionar.
+                </p>
+                <form class="form-signin" id="form-install">
+                    <h2 class="form-signin-heading">Nuevo usuario</h2>
+                    <input type="text" class="form-control ju-first-input" placeholder="Host" id="host" required="required" autocomplete="off">
+                    <input type="text" class="form-control ju-normal-input" placeholder="Usuario" id="user" required="required" autocomplete="off">
+                    <input type="password" class="form-control ju-normal-input" placeholder="contrase&ntilde;a" id="pass" autocomplete="off">
+                    <input type="text" class="form-control ju-last-input" placeholder="Nombre de base de datos" id="base" required="required" autocomplete="off" value="jusers">
+                    <button class="btn btn-lg btn-primary btn-block ju-index" type="submit" data-loading-text="Instalando...">Instalar</button>
+                </form>
+            </div>
+            <div id="ju-installed" class="col-sm-6 col-sm-offset-3 text-center">
+                <div class="bs-callout bs-callout-info fh">
+                    <h4>Jusers está instalado correctamente</h4>
+                    <span id="ju-ok" class="glyphicon glyphicon-ok"></span>
+                </div>
+            </div>
+
+            <div id="ju-installed-error" class="col-sm-6 col-sm-offset-3 text-center">
+                <div class="bs-callout bs-callout-info fh">
+                    <h4>Jusers está instalado pero los datos no son correctos</h4>
+                    <span id="ju-error" class="glyphicon glyphicon-warning-sign"></span>
+                </div>
+            </div>
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Error</h4>
+                        </div>
+                        <div class="modal-body"></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/moment-with-langs.js"></script>
+        <script src="../js/button.js"></script>
+        <script src="../js/install.js"></script>
+    </body>
+</html>

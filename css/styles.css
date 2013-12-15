@@ -1,0 +1,711 @@
+/* 
+    Document   : styles
+    Created on : Sep 18, 2013, 2:59:52 PM
+    Author     : serdnah2
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+body{
+    background: url('../img/background.png');
+    /*background: #eaeaea;*/
+}
+
+p
+
+a{
+    cursor: pointer;
+}
+
+#ju-menu{
+    border-bottom: 1px solid #1c5380;
+    border-bottom-color: rgba(4, 40, 71, 0.8);
+    background-color: #517fa4;
+    -webkit-box-shadow: 0 1px 0 rgba(111, 151, 182, 0.5) inset, 0 -1px 0 rgba(111, 151, 182, 0.2) inset, 0px 1px 1px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 0 rgba(111, 151, 182, 0.5) inset, 0 -1px 0 rgba(111, 151, 182, 0.2) inset, 0px 1px 1px rgba(0,0,0,.2);
+    box-shadow: 0 1px 0 rgba(111, 151, 182, 0.5) inset, 0 -1px 0 rgba(111, 151, 182, 0.2) inset, 0px 1px 1px rgba(0,0,0,.2);
+    background-image: url(//d36xtkk24g8jdx.cloudfront.net/bluebar/237540f/images/shared/noise-1.png), -webkit-gradient(linear, left top, left bottom, from(#517fa4), to(#306088));
+    background-image: url(//d36xtkk24g8jdx.cloudfront.net/bluebar/237540f/images/shared/noise-1.png), -webkit-linear-gradient(top, #517fa4, #306088);
+    background-image: url(//d36xtkk24g8jdx.cloudfront.net/bluebar/237540f/images/shared/noise-1.png), -moz-linear-gradient(top, #517fa4, #306088);
+    background-image: url(//d36xtkk24g8jdx.cloudfront.net/bluebar/237540f/images/shared/noise-1.png), -o-linear-gradient(top, #517fa4, #306088);
+    background-image: url(//d36xtkk24g8jdx.cloudfront.net/bluebar/237540f/images/shared/noise-1.png), -ms-linear-gradient(top, #517fa4, #306088);
+    background-image: url(//d36xtkk24g8jdx.cloudfront.net/bluebar/237540f/images/shared/noise-1.png), linear-gradient(top, #517fa4, #306088);
+}
+
+.ju-edit-active{
+    color: blue ;
+}
+
+.ju-item-img{
+    margin: 0 auto;
+    width: 180px;
+}
+
+.ju-new-img + .ju-new-img, #ju-all-picture, #ju-add-picture{
+    margin-top: 16px;
+}
+
+.ju-display-none{
+    display: none;
+}
+
+.ju-nav-item{
+    display: none;
+}
+
+.ju-nav-item-active{
+    display: block;
+}
+
+#ju-nav-details-picture{
+    margin: 0 auto;
+    width: 170px;
+}
+
+.ju-close-icon{
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 1;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    cursor: pointer;
+}
+
+.ju-close-icon:hover{
+    color: #000000;
+    text-decoration: none;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    cursor: pointer;
+}
+
+#ju-container{
+    position: relative;
+}
+#ju-nav li, #ju-picture-description a{
+    cursor: pointer;
+}
+#ju-nav, #ju-container{
+    margin-bottom: 16px;
+}
+
+#image{
+    visibility: hidden;
+}
+
+#ju-image-name{
+    margin: 8px 0;
+}
+
+#ju-upload-picture{
+    margin-bottom: 40px;
+}
+
+#ju-all-picture .ju-img-item{
+    overflow: hidden;
+    padding: 0;
+    height: auto;
+}
+
+.ju-img-item-data, .ju-button-save-description, .ju-container-description{
+    margin-top: 10px;
+}
+
+.ju-container-description{
+    margin-bottom: 12px;
+}
+
+#ju-all-picture .ju-add-space-img{
+    float: left;
+    overflow: hidden;
+    margin-top: 10px;
+    width: 200px;
+    height: 200px; 
+    background-position: 50% 25%;
+    background-size: cover;
+}
+
+.ju-add-space-img + .ju-add-space-img{
+    margin-left: 10px;
+}
+
+
+/*comments*/
+
+.messages{
+    /*display: none;*/
+}
+
+.all-messages{
+    margin: 10px 0;
+}
+
+#ju-comment-profile-input{
+    height: 34px;
+    resize: none;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -ms-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+}
+
+#ju-comment-profile-input.focus{
+    height: 74px;
+}
+
+#ju-new-comment-submit{
+    margin-top: 6px;
+    margin-right: 2px;
+}
+
+
+.arrow-box-left
+{
+    position: relative;
+    box-sizing: content-box;
+    border: 1px solid #b5cdd7;
+    background: #fafeff;
+    moz-box-sizing: content-box;
+    webkit-box-sizing: content-box;
+}
+.arrow-box-left:after,.arrow-box-left:before
+{
+    position: absolute;
+    right: 100%;
+    width: 0;
+    height: 0;
+    border: solid transparent;
+    content: " ";
+    pointer-events: none;
+}
+.arrow-box-left:after
+{
+    top: 7px;
+    border-width: 6px;
+    border-right-color: #fafeff;
+}
+.arrow-box-left:before
+{
+    top: 6px;
+    border-width: 7px;
+    border-right-color: #b5cdd7;
+}
+.arrow-box-left.gray
+{
+    border-color: #d8d8d8;
+    background: nil;
+}
+.arrow-box-left.gray:before
+{
+    border-right-color: #d8d8d8;
+}
+.arrow-box-left
+{
+    box-shadow: 0 1px 3px -1px rgba(0,0,0,0.1);
+    moz-box-shadow: 0 1px 3px -1px rgba(0,0,0,0.1);
+    webkit-box-shadow: 0 1px 3px -1px rgba(0,0,0,0.1);
+}
+.arrow-box-right
+{
+    position: relative;
+    box-sizing: content-box;
+    border: 1px solid #b5cdd7;
+    background: #fafeff;
+    moz-box-sizing: content-box;
+    webkit-box-sizing: content-box;
+}
+.arrow-box-right:after,.arrow-box-right:before
+{
+    position: absolute;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border: solid transparent;
+    content: " ";
+    pointer-events: none;
+}
+.arrow-box-right:after
+{
+    top: 7px;
+    border-width: 6px;
+    border-left-color: #fafeff;
+}
+.arrow-box-right:before
+{
+    top: 6px;
+    border-width: 7px;
+    border-left-color: #b5cdd7;
+}
+.arrow-box-right.gray
+{
+    border-color: #d8d8d8;
+    background: nil;
+}
+.arrow-box-right.gray:before
+{
+    border-left-color: #d8d8d8;
+}
+.arrow-box-right
+{
+    box-shadow: 0 1px 3px -1px rgba(0,0,0,0.1);
+    moz-box-shadow: 0 1px 3px -1px rgba(0,0,0,0.1);
+    webkit-box-shadow: 0 1px 3px -1px rgba(0,0,0,0.1);
+}
+.chat-box
+{
+    overflow: hidden;
+    margin: 0;
+    height: auto;
+    color: #5f5f5f;
+    list-style: none;
+    font-size: 11px;
+    line-height: 20px;
+}
+.chat-box .avatar
+{
+    position: absolute;
+    top: 0;
+}
+.chat-box li{
+    max-width: 69%;
+}
+.chat-box .arrow-box-left,.chat-box .arrow-box-right
+{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    moz-border-radius: 3px;
+    ms-border-radius: 3px;
+    o-border-radius: 3px;
+    webkit-border-radius: 3px;
+}
+.chat-box .arrow-box-left
+{
+    margin-right: 15px;
+    margin-left: 65px;
+}
+.chat-box .arrow-box-left .avatar
+{
+    left: -50px;
+}
+.chat-box .arrow-box-left.gray .info .name strong
+{
+    color: #393939;
+}
+.chat-box .arrow-box-right
+{
+    margin-right: 65px;
+    margin-left: 15px;
+}
+.chat-box .arrow-box-right .avatar
+{
+    right: -50px;
+}
+.chat-box .arrow-box-right.gray .info .name strong
+{
+    color: #393939;
+}
+
+.avatar img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.avatar-small {
+    max-width: 32px;
+    max-height: 32px;
+}
+
+.arrow-box-left{
+    float: left !important;
+}
+.arrow-box-right{
+    float: right !important;
+}
+
+.pull-left img{
+    max-width: 62px;
+    max-height: 62px;
+}
+
+/*end comments*/
+
+#ju-nav-profile-user, #ju-nav-profile-user-img-and-info{
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+.ju-nav-profile-user-img-and-info{
+    float: left;
+}
+
+#ju-nav-profile-user-img-and-info-image{
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+
+}
+
+#ju-nav-profile-user-img-and-info-information{
+    width: 78%;
+}
+
+#ju-nav-profile-user-options{
+    height: 50px;
+    /*border-bottom: 1px solid #dddddd;*/
+}
+
+#ju-nav-profile-user-options{
+    line-height: 50px;
+}
+
+#ju-nav-profile-user-options .text-center span.glyphicon.glyphicon-comment{
+    padding-right: 10px;
+}
+
+.ju-nav-profile-item-comment{
+    position: relative;
+    overflow: hidden;
+    padding: 10px 0;
+    height: auto;
+}
+
+.ju-nav-profile-item-comment:last-child{
+    border-bottom: 3px solid #428bca;
+}
+
+.ju-nav-profile-item-comment-picture{
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+}
+
+#ju-picture-container{
+
+    background: #e0e1e2;
+    -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.05), inset -1px 0 0 rgba(0,0,0,.05);
+    -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.05), inset -1px 0 0 rgba(0,0,0,.05);
+    box-shadow: inset 1px 0 0 rgba(0,0,0,.05), inset -1px 0 0 rgba(0,0,0,.05);
+
+    position: relative;
+    display: none;
+}
+
+#ju-picture-container img{
+    margin: 0 auto;
+}
+
+#ju-arrow-left, #ju-arrow-right{
+    position: absolute;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#ju-all-picture-user{
+    display: none;
+}
+
+#ju-arrow-left:hover, #ju-arrow-right:hover{
+    opacity: 1;
+}
+
+#ju-arrow-left{
+    left: 0;
+}
+
+#ju-arrow-right{
+    right: 0;
+    width: 80%;
+}
+
+#ju-arrow-right, #ju-arrow-left{
+    font-size: 2em;
+}
+
+.ju-arrow-pagination{
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+}
+
+#ju-arrow-right .ju-arrow-pagination{
+    right: 0;
+}
+
+#ju-arrow-container-left, #ju-arrow-container-right{
+    display: none;
+}
+
+.ju-picture-user{
+    overflow: hidden;
+    margin: 0 auto;
+    height: 200px;
+    /*width: 140px;
+    height: 140px;*/
+    border: 6px solid #fff;
+    background-color: #fff;
+    background-size: cover;
+    -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.ju-picture-user img{
+    width: 100%;
+    height: 100%;
+}
+
+.ju-picture-user + .ju-picture-user{
+    margin-left: 12px;
+}
+
+.ju-container-item-image-user{
+    margin-bottom: 16px;
+}
+
+#ju-new-comment-button-submit{
+    margin-top: 12px;
+}
+
+#ju-container-new-comment, #ju-picture-add-description, #ju-picture-description, #ju-edit-button-profile, #ju-options-picture,
+#ju-success-edit, #ju-error-edit, #ju-success-edit-password, #ju-error-edit-password, #ju-more-picture, #ju-more-news{
+    display: none;
+}
+
+#ju-picture-description div{
+    padding: 12px 0;
+}
+
+#ju-options-picture{
+    position: absolute;
+    right: 5px;
+    bottom: -50px;
+    z-index: 10;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#ju-edit-button-profile{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+#ju-button-cancel-edit{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+address{
+    font-style: italic !important;
+}
+
+#ju-new-comment-profile{
+    padding: 10px 0;
+}
+
+#ju-total-comments{
+    position: relative;
+    top: -3px;
+    left: -2px;
+}
+
+.ju-date-comment{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: gray;
+    font-size: 10px;
+}
+
+#ju-more{
+    margin-top: 12px;
+}
+
+#form-signin, #form-install {
+    position: relative;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+.shake {
+    -webkit-animation-name: shake;
+    -moz-animation-name: shake;
+    -ms-animation-name: shake;
+    -o-animation-name: shake;
+    animation-name: shake;
+}
+
+.bs-callout{
+    margin: 20px 0;
+    padding: 20px;
+    border-left: 3px solid #eee;
+
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -o-transition: all 1s linear;
+}
+
+.bs-callout.animation{
+    -webkit-transform: trasnlate(-10px, 0);
+}
+
+.bs-callout-info {
+    position: relative;
+    /*background-color: #f4f8fa;*/
+    background-color: #fff;
+}
+
+.ju-new-info{
+    margin-bottom: 12px;
+}
+
+.center-img{
+    margin: 0 auto;
+}
+
+.bs-callout:hover{
+    border-color: #bce8f1;
+
+}
+
+#ju-container-all-news{
+    background: #e0e1e2;
+    -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.05), inset -1px 0 0 rgba(0,0,0,.05);
+    -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.05), inset -1px 0 0 rgba(0,0,0,.05);
+    box-shadow: inset 1px 0 0 rgba(0,0,0,.05), inset -1px 0 0 rgba(0,0,0,.05);
+}
+
+#ju-all-news .ju-date-comment{
+    top: 5px;
+    right: 7px;
+}
+
+@-webkit-keyframes shake {
+    0%, 100% {-webkit-transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {-webkit-transform: translateX(10px);}
+}
+@-moz-keyframes shake {
+    0%, 100% {-moz-transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {-moz-transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {-moz-transform: translateX(10px);}
+}
+@-ms-keyframes shake {
+    0%, 100% {-ms-transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {-ms-transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {-ms-transform: translateX(10px);}
+}
+@-o-keyframes shake {
+    0%, 100% {-o-transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {-o-transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {-o-transform: translateX(10px);}
+}
+@keyframes shake {
+    0%, 100% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
+
+@media (min-width: 320px) and (max-width: 400px) {
+    .ju-picture-user{
+        height: 150px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+    #ju-nav-profile-user-img-and-info-image{
+        margin: 0 auto;
+        width: 60px;
+        height: 60px;
+        background-size: cover;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    #ju-arrow-left, #ju-arrow-right{
+        width: 50%;
+    }
+}
+
+@media (max-width: 992px){
+    #ju-container-page-news{
+        background: #e0e1e2;
+        -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.05), inset -1px 0 0 rgba(0,0,0,.05);
+        -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.05), inset -1px 0 0 rgba(0,0,0,.05);
+        box-shadow: inset 1px 0 0 rgba(0,0,0,.05), inset -1px 0 0 rgba(0,0,0,.05);
+    }
+}
+
+.row{
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.fh{
+    overflow: hidden;
+    height: auto;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus{
+    background-color: #1c5380;
+    background-color: rgba(6, 54, 95, 0.35);
+    -webkit-box-shadow: -1px 0 0 rgba(255,255,255,.15), inset 0 0 1px rgba(6, 54, 95, 0.4), inset 1px 0 1px rgba(6, 54, 95, 0.4);
+    -moz-box-shadow: -1px 0 0 rgba(255,255,255,.15), inset 0 0 1px rgba(6, 54, 95, 0.4), inset 1px 0 1px rgba(6, 54, 95, 0.4);
+    box-shadow: -1px 0 0 rgba(255,255,255,.15), inset 0 0 1px rgba(6, 54, 95, 0.4), inset 1px 0 1px rgba(6, 54, 95, 0.4);
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus{
+    border-right-color: rgba(0, 0, 0, 0.15);
+    background: url(//d36xtkk24g8jdx.cloudfront.net/bluebar/237540f/images/alpha/fff_10.png);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.container-margin-top{
+    position: relative;
+    margin-top: 20px;
+}
+
+.dropdown-menu-right {
+    right: 0;
+    left: auto;
+}
+
+body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom{
+    margin-right: 0;
+}
+
+#ju-ok{
+    font-size: 4em;
+    color: green;
+}
+
+#ju-error{
+    font-size: 4em;
+    color: red;
+}

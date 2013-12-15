@@ -1,0 +1,28 @@
+<link href="css/login.css" rel="stylesheet">
+<form class="form-signin" id="form-register">
+    <h2 class="form-signin-heading">Nuevo usuario</h2>
+    <input type="text" class="form-control ju-first-input" placeholder="Usuario" id="user" required="required" autocomplete="off">
+    <input type="email" class="form-control ju-normal-input" placeholder="Email" id="email" required="required" autocomplete="off">
+    <input type="password" class="form-control ju-normal-input" placeholder="contrase&ntilde;a" id="password" required="required" autocomplete="off">
+    <input type="password" class="form-control ju-normal-input" placeholder="Confirmar contrase&ntilde;a" id="repeatpassword" required="required" autocomplete="off">
+    <input type="text" class="form-control ju-normal-input" placeholder="Ciudad" id="city" required="required" autocomplete="off">
+    <input type="text" class="form-control ju-last-input" placeholder="Descripci&oacute;n" id="description" required="required" autocomplete="off">
+    <button class="btn btn-lg btn-primary btn-block ju-index" type="submit" data-loading-text="Registrando...">Crear</button>
+</form>
+<div class="text-center">
+    <a href="?view=login">Iniciar sesion</a>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Error</h4>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
