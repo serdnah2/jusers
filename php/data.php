@@ -5,12 +5,12 @@ error_reporting(0);
 class Data {
 
     private $file = "../data/data.json";
-    private $messages = array(
+    public $messages = array(
         1 => "error al conectarse con el usuario establecido",
         2 => "No se ha podido establecer la conexi&oacute;n a la base de datos con la informaci&oacute;n establecida",
         3 => "Ha ocurrido un error al momento de guardar los datos",
         4 => "El archivo <b>data.json</b> no tiene permisos suficientes",
-        5 => "No se ha podido crear la base de datos"
+        5 => "No se ha podido crear la base de datos con la informaci&oacute;n ingresada"
     );
     private $host = "";
     private $user = "";
@@ -152,7 +152,7 @@ if ($createDataBase) {
     $array = array(
         "error" => "Conectando...",
         "code" => "5",
-        "description" => $this->messages["5"]
+        "description" => $data->messages["5"]
     );
     print json_encode($array);
 }
