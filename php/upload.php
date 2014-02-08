@@ -21,7 +21,7 @@ foreach ($_FILES["img"]["error"] as $key => $value) {
         $idImage = uniqid('ju_');
         copy($_FILES['img']['tmp_name'][$key], '../img/pictures/' . $idImage . $name);
         $linkImage = 'img/pictures/' . $idImage . $name;
-        $insert = mysql_query("INSERT INTO images (idimages,iduser,description,link) VALUES ('NULL', '{$user}', 'NULL', '{$linkImage}')");
+        $insert = mysql_query("INSERT INTO images (idimages,iduser,description,link) VALUES (NULL, '{$user}', 'NULL', '{$linkImage}')");
 
         $result = mysql_query("SELECT * FROM images WHERE link = '$linkImage'");
         $idimages = null;
@@ -29,7 +29,7 @@ foreach ($_FILES["img"]["error"] as $key => $value) {
             $idimages = $r['idimages'];
         }
 
-        $insertNew = mysql_query("INSERT INTO news (idnews,type,iduser,iduserto,idpicture,comment) VALUES ('NULL','3', '{$user}', '{$user}' , '{$idimages}', 'none')") or die(mysql_error());
+        $insertNew = mysql_query("INSERT INTO news (idnews,type,iduser,iduserto,idpicture,comment) VALUES (NULL,'3', '{$user}', '{$user}' , '{$idimages}', 'none')") or die(mysql_error());
 
         $array = array(
             "link" => 'img/pictures/' . $idImage . $name

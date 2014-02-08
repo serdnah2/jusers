@@ -308,9 +308,9 @@ class Functions {
         $iduser = $_GET['iduser'];
         $comment = $_POST['comment'];
 
-        $insert = mysql_query("INSERT INTO comments (idcomments,idusercommented,idimage,comment) VALUES ('NULL', '{$iduser}', '{$idpicture}', '{$comment}')") or die(mysql_error());
+        $insert = mysql_query("INSERT INTO comments (idcomments,idusercommented,idimage,comment) VALUES (NULL, '{$iduser}', '{$idpicture}', '{$comment}')") or die(mysql_error());
         $pictureInfo = $this->getDataImage($idpicture);
-        $insertNew = mysql_query("INSERT INTO news (idnews,type,iduser,iduserto,idpicture, comment) VALUES ('NULL','2', '{$iduser}', '{$pictureInfo['iduser']}' , '{$idpicture}', '{$comment}')") or die(mysql_error());
+        $insertNew = mysql_query("INSERT INTO news (idnews,type,iduser,iduserto,idpicture, comment) VALUES (NULL,'2', '{$iduser}', '{$pictureInfo['iduser']}' , '{$idpicture}', '{$comment}')") or die(mysql_error());
         if ($insert && $insertNew) {
             $user = $this->getDataUser($iduser);
             $array = array(
@@ -364,8 +364,8 @@ class Functions {
         $iduser = $_GET['iduser'];
         $comment = $_POST['comment'];
 
-        $insert = mysql_query("INSERT INTO comments_profile (idcomment,iduser,iduserposted,comment) VALUES ('NULL', '{$iduser}', '{$iduserposted}', '{$comment}')") or die(mysql_error());
-        $insertNew = mysql_query("INSERT INTO news (idnews,type,iduser,iduserto,idpicture, comment) VALUES ('NULL','1', '{$iduserposted}', '{$iduser}' , 'NULL', '{$comment}' )") or die(mysql_error());
+        $insert = mysql_query("INSERT INTO comments_profile (idcomment,iduser,iduserposted,comment) VALUES (NULL, '{$iduser}', '{$iduserposted}', '{$comment}')") or die(mysql_error());
+        $insertNew = mysql_query("INSERT INTO news (idnews,type,iduser,iduserto,idpicture, comment) VALUES (NULL,'1', '{$iduserposted}', '{$iduser}' , 'NULL', '{$comment}' )") or die(mysql_error());
         if ($insert && $insertNew) {
             $user = $this->getDataUser($iduserposted);
             $array = array(
