@@ -95,7 +95,7 @@ class Functions {
             return;
         } else {
             if (!empty($username) && !empty($email) && !empty($city) && !empty($description) && !empty($password)) {
-                $insert = mysql_query("INSERT INTO users (id,username,password,email,city,description,userpicture) VALUES ('NULL', '{$username}', '{$password}', '{$email}', '{$city}', '{$description}','img/default.png')") or die(mysql_error());
+                $insert = mysql_query("INSERT INTO users (id,username,password,email,city,description,userpicture) VALUES (NULL, '{$username}', '{$password}', '{$email}', '{$city}', '{$description}', 'img/default.png')") or die(mysql_error());
                 if ($insert) {
                     $array = array(
                         "success" => "Usuario creado correctamente",
