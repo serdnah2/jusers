@@ -20,7 +20,7 @@ foreach ($_FILES["img"]["error"] as $key => $value) {
         // Replace the images to a new nice location. Note the use of copy() instead of move_uploaded_file(). I did this becouse the copy function will replace with the good file rights and  move_uploaded_file will not shame on you move_uploaded_file.
         $idImage = uniqid('ju_');
         copy($_FILES['img']['tmp_name'][$key], '../img/pictures/' . $idImage . $name);
-        $linkImage = 'img/pictures/' . $idImage . $name;
+        $linkImage = 'img/pictures/' . $idImage . rawurlencode($name);
         $insert = mysql_query("INSERT INTO images (idimages,iduser,description,link) VALUES (NULL, '{$user}', 'NULL', '{$linkImage}')");
 
         $result = mysql_query("SELECT * FROM images WHERE link = '$linkImage'");

@@ -74,7 +74,7 @@
                             success: function(res) {
                                 var data = JSON.parse(res);
                                 for (var i in data) {
-                                    $('#ju-container-new-picture').append('<div class="ju-new-img"><img class="img-thumbnail" src="' + encodeURIComponent(data[i].link) + '" alt="picture"/></div>');
+                                    $('#ju-container-new-picture').append('<div class="ju-new-img"><img class="img-thumbnail" src="' + data[i].link + '" alt="picture"/></div>');
                                 }
                                 $('.ju-index').button('reset');
                                 setTimeout(function() {
@@ -324,7 +324,7 @@
                             $.addItem = $('\
                                 <div class="ju-img-item">\
                                     <div class="text-center">\
-                                        <img src="' + encodeURIComponent(data[i].link) + '" class="img-responsive img-thumbnail"/>\
+                                        <img src="' + data[i].link + '" class="img-responsive img-thumbnail"/>\
                                     </div>\
                                     <div>\
                                         <div class="ju-container-description" data-ju-container-description="' + data[i].idimages + '">' + description + '</div>\
@@ -524,7 +524,7 @@
                                                 <span><a href="?view=profile&iduser=' + resp[i].usernameto.id + '" >' + resp[i].usernameto.username + '</a></span>\
                                             </div>\
                                             <div>\
-                                                <a href="?view=picture&idpicture=' + resp[i].picture.idimages + '&iduser=' + resp[i].picture.iduser + '"><img src="' + encodeURIComponent(resp[i].picture.link) + '" class="img-responsive center-img" /></a>\
+                                                <a href="?view=picture&idpicture=' + resp[i].picture.idimages + '&iduser=' + resp[i].picture.iduser + '"><img src="' + resp[i].picture.link + '" class="img-responsive center-img" /></a>\
                                             </div>\
                                             <div class="ju-nav-profile-item-comment">\
                                                 <div class="col-xs-3 ju-nav-profile-item-comment-picture" style="background-image:url(' + resp[i].username.userpicture + ');"></div>\
@@ -548,7 +548,7 @@
                                                 <span>ha subido una <a href="?view=picture&idpicture=' + resp[i].picture.idimages + '&iduser=' + resp[i].picture.iduser + '">foto</a></span>\
                                             </div>\
                                             <div>\
-                                                <a href="?view=picture&idpicture=' + resp[i].picture.idimages + '&iduser=' + resp[i].picture.iduser + '"><img src="' + encodeURIComponent(resp[i].picture.link) + '" class="img-responsive center-img"/></a>\
+                                                <a href="?view=picture&idpicture=' + resp[i].picture.idimages + '&iduser=' + resp[i].picture.iduser + '"><img src="' + resp[i].picture.link + '" class="img-responsive center-img"/></a>\
                                             </div>\
                                         </div>\
                                         ');
@@ -724,7 +724,7 @@
                                         $('#ju-picture-description div span').click(showInput);
                                     }
                                 }
-                                $('#ju-picture-container img').attr('src', encodeURIComponent(resp.data[0].link));
+                                $('#ju-picture-container img').attr('src', resp.data[0].link);
                                 $('.ju-button-save-description').click(saveDescription);
                             } else {
                                 var message = null;
@@ -800,7 +800,7 @@
                                         $.addItem = $('\
                                         <div class="col-md-3 col-sm-4 col-xs-6 ju-container-item-image-user">\
                                             <a href="?view=picture&iduser=' + self.parameters.iduser + '&idpicture=' + data[i].idimages + '">\
-                                                <div class="ju-picture-user" style="background-image:url(' + encodeURIComponent(data[i].link) + ')"></div>\
+                                                <div class="ju-picture-user" style="background-image:url(' + data[i].link + ')"></div>\
                                             </a>\
                                         </div>\
                                         ');
